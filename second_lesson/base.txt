@@ -1,0 +1,6 @@
+Mars,50,1
+Bownty,60,5
+Twix,40,2
+Lord,65,0
+Mix,60,0
+Hers,50,15
