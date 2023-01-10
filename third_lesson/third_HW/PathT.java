@@ -2,7 +2,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Path {
+public class PathT {
  
     public static String getPathName(String pathName) {
         Map<String, String> map = new HashMap<>();

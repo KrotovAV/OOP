@@ -5,11 +5,11 @@
 // import java.util.function.Function;
 // import java.util.stream.Collectors;
 
-public class Tip extends PodCarstvo {
+public class TipT extends PodCarstvoT {
     private String id;
     private String name;
 
-    public Tip() {
+    public TipT() {
         id = "1.";
         name = "Пустое имя";
     }
@@ -26,12 +26,12 @@ public class Tip extends PodCarstvo {
     //     this.id = id;
     // }
  
-    public Tip(String id, String name) {
+    public TipT(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public Tip(String id) {
+    public TipT(String id) {
         this.id = id;
     }
 

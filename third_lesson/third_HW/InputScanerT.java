@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class InputScaner {
+class InputScanerT {
     Scanner iScanner;
 
     public String inputString(String text)

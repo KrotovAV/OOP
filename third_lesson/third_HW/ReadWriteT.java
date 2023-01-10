@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
-public class ReadWrite {
+public class ReadWriteT {
 
     public static ArrayList<String> readFile(String pathReadF) throws Exception {
         String line;
@@ -33,7 +33,7 @@ public class ReadWrite {
     }
 
     public static void deliteString(String pathWriteF, String id, String name) throws Exception {
-        ArrayList<Carstvo> prods = new ArrayList<>();
+        ArrayList<CarstvoT> prods = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(pathWriteF, StandardCharsets.UTF_8));
         String str, nameCarstvo;
         String idCarstvo;
@@ -42,7 +42,7 @@ public class ReadWrite {
             idCarstvo = words[0];
             nameCarstvo = words[1];
             if (!(idCarstvo.equals(id)) | !(nameCarstvo.equals(name))) {
-                prods.add(new Carstvo(idCarstvo, nameCarstvo));
+                prods.add(new CarstvoT(idCarstvo, nameCarstvo));
             }
         }
         br.close();
@@ -50,7 +50,7 @@ public class ReadWrite {
             FileWriter writer = new FileWriter(pathWriteF, StandardCharsets.UTF_8, false);
             // FileWriter writer = new FileWriter(pathWriteF, StandardCharsets.UTF_8, true);
             BufferedWriter bw = new BufferedWriter(writer);
-            for (Carstvo carstvo : prods) {
+            for (CarstvoT carstvo : prods) {
                 bw.write(carstvo.getIdCarstvo() + "," + carstvo.getNameCarstvo() + "\n");
             }
             bw.close();

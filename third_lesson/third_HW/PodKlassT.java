@@ -6,11 +6,11 @@
 // import java.util.function.Function;
 // import java.util.stream.Collectors;
 
-public class PodKlass extends Klass {
+public class PodKlassT extends KlassT {
     private String id;
     private String name;
 
-    public PodKlass() {
+    public PodKlassT() {
         id = "1.";
         name = "Пустое имя";
     }
@@ -26,12 +26,12 @@ public class PodKlass extends Klass {
     //     this.idPodKlass = idPodKlass;
     // }
  
-    public PodKlass(String id, String name) {
+    public PodKlassT(String id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public PodKlass(String id) {
+    public PodKlassT(String id) {
         super(id);
     }
 

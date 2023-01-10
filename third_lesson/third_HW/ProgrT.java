@@ -3,9 +3,9 @@
 // Описать некоторое количество компонент, например:
 // Царстово - Подцарство - класс - подкласс - отряд - семейство - род - вид.
 
-public class Programm {
+public class ProgrT {
 
     public static void main(String[] args) throws Exception {
-        Controller.run();
+        ControllerT.run();
     }
 }

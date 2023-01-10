@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-public class Menu {
+public class MenuT {
 // Carstvo - Podcarstvo - Tip - Klass -Pod Klass - Otriyd - Semeistvo - Rod - Vid
     public static String getMenuName(String menuName) {
         Map<String, String> map = new HashMap<>();

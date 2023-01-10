@@ -6,11 +6,11 @@
 
 // Carstvo - Podcarstvo - Tip - Klass -Pod Klass - Otriyd - Semeistvo - Rod - Vid
 
-public class PodCarstvo extends Carstvo {
+public class PodCarstvoT extends CarstvoT {
     private String id;
     private String name;
 
-    public PodCarstvo() {
+    public PodCarstvoT() {
         id = "1.";
         name = "Пустое имя";
     }
@@ -24,11 +24,11 @@ public class PodCarstvo extends Carstvo {
     //     super(id, name;
     //     this.id = id;
     // }
-    public PodCarstvo(String id, String name) {
+    public PodCarstvoT(String id, String name) {
         this.id = id;
         this.name = name;
     }
-    public PodCarstvo(String id) {
+    public PodCarstvoT(String id) {
         super(id);
     }
     public String getId(){

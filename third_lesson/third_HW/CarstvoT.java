@@ -6,19 +6,19 @@
 // import java.util.function.Function;
 // import java.util.stream.Collectors;
 
-public class Carstvo {
+public class CarstvoT {//extends Metods {
     private String id;
     private String name;
 
-    public Carstvo() {
+    public CarstvoT() {
         id = "1.";
         name = "Пустое имя";
     }
-    public Carstvo(String id, String name) {
+    public CarstvoT(String id, String name) {
         this.id = id;
         this.name = name;
     }
-    public Carstvo(String id) {
+    public CarstvoT(String id) {
         this.id = id;
     }
 
