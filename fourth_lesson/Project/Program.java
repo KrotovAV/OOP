@@ -9,15 +9,14 @@ import java.text.SimpleDateFormat;
 public class Program {
     
     void program() {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z"); 
-        Date date = new Date(System.currentTimeMillis()); 
-        System.out.println(formatter.format(date));
+        // SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z"); 
+        // Date date = new Date(System.currentTimeMillis()); 
+        // System.out.println(formatter.format(date));
 
         Chat gb = new Chat();
-        
-        User client1 = new User("Вася", gb, formatter);
-        User client2 = new User("Маша", gb, formatter);
-        User client4 = new User("Вальдемар", gb, formatter);
+        User client1 = new User("Вася", gb);
+        User client2 = new User("Маша", gb);
+        User client4 = new User("Вальдемар", gb);
 
         gb.appendClient(client1);
         gb.appendClient(client2);
