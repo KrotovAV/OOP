@@ -10,9 +10,11 @@ class User {
     SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z"); 
     Date date = new Date(System.currentTimeMillis()); 
 
-    public User(String name, Chatroom chatroom) {
+    public User(String name, Chatroom chatroom, SimpleDateFormat formatter) {
         this.name = name;
         this.chatroom = chatroom;
+        this.formatter = formatter;
+        // formatter.format(date);
     }
     
     String strMessage(String msg) {
@@ -24,7 +26,7 @@ class User {
     }
 
     void printMessage(String msg) {
-        System.out.printf("Чат %s: %s\n", name, msg);
+        System.out.printf("Чат %s %s: %s\n", formatter.format(date), name, msg);
     }
 
     void printMessage(String msg, Double f) {

@@ -19,7 +19,7 @@ class Chat implements Chatroom {
 
         for (User user : users) {
             if (user.name != me.name) {
-                System.out.println(formatter.format(date) + " ");
+                formatter.format(date);
                 user.printMessage(text);
                 text = text + user.strMessage(text);
             }
