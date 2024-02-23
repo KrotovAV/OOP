@@ -324,6 +324,7 @@ public class ControllerT {
                         // }
                     }
                 }
+                printList
                 // if (l.equals("c")) {
                 //     while(checkC) {
                 //         n = inS1.inputString(Menu.getMenuName("Change"));

@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Klass extends Tip {
+public class Klass extends TipT {
     private String idKlass;
     private String nameKlass;
 
@@ -46,26 +46,26 @@ public class Klass extends Tip {
         this.nameKlass = value;
     }
 
-    public static Map<String, Klass> convertListKlass(List<Klass> list) {
-        Map<String, Klass> map = list.stream()
-            .collect(Collectors.toMap(Klass::getNameKlass, Function.identity()));
+    public static Map<String, KlassT> convertListKlass(List<KlassT> list) {
+        Map<String, KlassT> map = list.stream()
+            .collect(Collectors.toMap(KlassT::getNameKlass, Function.identity()));
             return map;
     }
-    public static ArrayList<Klass> convertStringToKlass(List<String> lines) {
-        ArrayList<Klass> prods = new ArrayList<>();
+    public static ArrayList<KlassT> convertStringToKlass(List<String> lines) {
+        ArrayList<KlassT> prods = new ArrayList<>();
         String id, name;
         for (String line : lines) {
             String[] words = line.split(",");
             id = words[0];
             name = words[1];
-            prods.add(new Klass(id, name));
+            prods.add(new KlassT(id, name));
         }
         return prods;
     }
-    public static String FindNameKlass(ArrayList<Klass> klasss, Vid findVid) {
+    public static String FindNameKlass(ArrayList<KlassT> klasss, VidT findVid) {
         String findIdKlass = findVid.getIdVid();
         String newNameKlass = "";
-        for (Klass klass : klasss) {
+        for (KlassT klass : klasss) {
             if (findIdKlass.contains(klass.getIdKlass()) == true) {
               newNameKlass = klass.getNameKlass();
             }

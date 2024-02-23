@@ -32,27 +32,27 @@ public class Carstvo {
         this.nameCarstvo = value;
     }
 
-    public static Map<String, Carstvo> convertListCarstvo(List<Carstvo> list) {
-        Map<String, Carstvo> map = list.stream()
-            .collect(Collectors.toMap(Carstvo::getNameCarstvo, Function.identity()));
+    public static Map<String, CarstvoT> convertListCarstvo(List<CarstvoT> list) {
+        Map<String, CarstvoT> map = list.stream()
+            .collect(Collectors.toMap(CarstvoT::getNameCarstvo, Function.identity()));
             return map;
     }
-    public static ArrayList<Carstvo> convertStringToCarstvo(ArrayList<String> lines) {
-        ArrayList<Carstvo> prods = new ArrayList<>();
+    public static ArrayList<CarstvoT> convertStringToCarstvo(ArrayList<String> lines) {
+        ArrayList<CarstvoT> prods = new ArrayList<>();
         String id, name;
         for (String line : lines) {
             String[] words = line.split(",");
             id = words[0];
             name = words[1];
-            prods.add(new Carstvo(id, name));
+            prods.add(new CarstvoT(id, name));
         }
         return prods;
     }
 
-    public static String FindNameCarstvo(ArrayList<Carstvo> carstvos, Vid findVid) {
+    public static String FindNameCarstvo(ArrayList<CarstvoT> carstvos, VidT findVid) {
         String findIdCarstvo = findVid.getIdVid();
         String newNameCarstvo = "";
-        for (Carstvo carstvo : carstvos) {
+        for (CarstvoT carstvo : carstvos) {
             if (findIdCarstvo.contains(carstvo.getIdCarstvo()) == true) {
                 newNameCarstvo = carstvo.getNameCarstvo();
             }

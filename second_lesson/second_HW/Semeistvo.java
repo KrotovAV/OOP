@@ -62,7 +62,7 @@ public class Semeistvo extends Otriyd {
         return prods;
     }
 
-    public static String FindNameSemeistvo(ArrayList<Semeistvo> semeistvos, Vid findVid) {
+    public static String FindNameSemeistvo(ArrayList<Semeistvo> semeistvos, VidT findVid) {
         String findIdSemeistvo = findVid.getIdVid();
         String newNameSemeistvo= "";
         for (Semeistvo semeistvo : semeistvos) {

@@ -1,7 +1,7 @@
+import Project.view;
 
 public class controller {
     
- 
     public static void run() throws Exception{
         // view.printEmrty();
         Structure structure = new Structure();

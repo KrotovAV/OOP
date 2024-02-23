@@ -47,28 +47,28 @@ public class Tip extends PodCarstvo {
         this.nameTip = value;
     }
 
-    public static Map<String, Tip> convertListTip(List<Tip> list) {
-        Map<String, Tip> map = list.stream()
-            .collect(Collectors.toMap(Tip::getNameTip, Function.identity()));
+    public static Map<String, TipT> convertListTip(List<TipT> list) {
+        Map<String, TipT> map = list.stream()
+            .collect(Collectors.toMap(TipT::getNameTip, Function.identity()));
             return map;
     }
 
-    public static ArrayList<Tip> convertStringToTip(List<String> lines) {
-        ArrayList<Tip> prods = new ArrayList<>();
+    public static ArrayList<TipT> convertStringToTip(List<String> lines) {
+        ArrayList<TipT> prods = new ArrayList<>();
         String id, name;
         for (String line : lines) {
             String[] words = line.split(",");
             id = words[0];
             name = words[1];
-            prods.add(new Tip(id, name));
+            prods.add(new TipT(id, name));
         }
         return prods;
     }
 
-    public static String FindNameTip(ArrayList<Tip> tips, Vid findVid) {
+    public static String FindNameTip(ArrayList<TipT> tips, VidT findVid) {
         String findIdTip = findVid.getIdVid();
         String newNameTip = "";
-        for (Tip tip : tips) {
+        for (TipT tip : tips) {
             if (findIdTip.contains(tip.getIdTip()) == true) {
               newNameTip = tip.getNameTip();
             }

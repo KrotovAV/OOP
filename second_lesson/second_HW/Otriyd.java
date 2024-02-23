@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Otriyd extends PodKlass {
+public class Otriyd extends PodKlassT {
     private String idOtriyd;
     private String nameOtriyd;
 
@@ -46,28 +46,28 @@ public class Otriyd extends PodKlass {
         this.nameOtriyd = value;
     }
 
-    public static Map<String, Otriyd> convertListOtriyd(List<Otriyd> list) {
-        Map<String, Otriyd> map = list.stream()
-            .collect(Collectors.toMap(Otriyd::getNameOtriyd, Function.identity()));
+    public static Map<String, OtriydT> convertListOtriyd(List<OtriydT> list) {
+        Map<String, OtriydT> map = list.stream()
+            .collect(Collectors.toMap(OtriydT::getNameOtriyd, Function.identity()));
             return map;
     }
 
-    public static ArrayList<Otriyd> convertStringToOtriyd(List<String> lines) {
-        ArrayList<Otriyd> prods = new ArrayList<>();
+    public static ArrayList<OtriydT> convertStringToOtriyd(List<String> lines) {
+        ArrayList<OtriydT> prods = new ArrayList<>();
         String id, name;
         for (String line : lines) {
             String[] words = line.split(",");
             id = words[0];
             name = words[1];
-            prods.add(new Otriyd(id, name));
+            prods.add(new OtriydT(id, name));
         }
         return prods;
     }
 
-    public static String FindNameOtriyd(ArrayList<Otriyd> otriyds, Vid findVid) {
+    public static String FindNameOtriyd(ArrayList<OtriydT> otriyds, VidT findVid) {
         String findIdOtriyd = findVid.getIdVid();
         String newNameOtriyd = "";
-        for (Otriyd otriyd : otriyds) {
+        for (OtriydT otriyd : otriyds) {
             if (findIdOtriyd.contains(otriyd.getIdOtriyd()) == true) {
               newNameOtriyd = otriyd.getNameOtriyd();
             }

@@ -1,3 +1,5 @@
+import Project.modell;
+
 public class modell {
     public static int[] createArr(int nF) {
         int[] newArrF = new int[nF];

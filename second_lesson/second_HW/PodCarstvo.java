@@ -42,26 +42,26 @@ public class PodCarstvo extends Carstvo {
         this.namePodCarstvo = value;
     }
 
-    public static Map<String, PodCarstvo> convertListPodCarstvo(List<PodCarstvo> list) {
-        Map<String, PodCarstvo> map = list.stream()
-            .collect(Collectors.toMap(PodCarstvo::getNamePodCarstvo, Function.identity()));
+    public static Map<String, PodCarstvoT> convertListPodCarstvo(List<PodCarstvoT> list) {
+        Map<String, PodCarstvoT> map = list.stream()
+            .collect(Collectors.toMap(PodCarstvoT::getNamePodCarstvo, Function.identity()));
             return map;
     }
-    public static ArrayList<PodCarstvo> convertStringToPodCarstvo(ArrayList<String> lines) {
-        ArrayList<PodCarstvo> prods = new ArrayList<>();
+    public static ArrayList<PodCarstvoT> convertStringToPodCarstvo(ArrayList<String> lines) {
+        ArrayList<PodCarstvoT> prods = new ArrayList<>();
         String id, name;
         for (String line : lines) {
             String[] words = line.split(",");
             id = words[0];
             name = words[1];
-            prods.add(new PodCarstvo(id, name));
+            prods.add(new PodCarstvoT(id, name));
         }
         return prods;
     }
-    public static String FindNamePodCarstvo(ArrayList<PodCarstvo> podCarstvos, Vid findVid) {
+    public static String FindNamePodCarstvo(ArrayList<PodCarstvoT> podCarstvos, VidT findVid) {
         String findIdPodCarstvo = findVid.getIdVid();
         String newNamePodCarstvo = "";
-        for (PodCarstvo podCarstvo : podCarstvos) {
+        for (PodCarstvoT podCarstvo : podCarstvos) {
             if (findIdPodCarstvo.contains(podCarstvo.getIdPodCarstvo()) == true) {
               newNamePodCarstvo = podCarstvo.getNamePodCarstvo();
             }

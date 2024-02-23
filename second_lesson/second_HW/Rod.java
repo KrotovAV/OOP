@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Rod extends Semeistvo {
+public class Rod extends SemeistvoT {
     private String idRod;
     private String nameRod;
 
@@ -62,7 +62,7 @@ public class Rod extends Semeistvo {
         }
         return prods;
     }
-    public static String FindNameRod(ArrayList<Rod> rods, Vid findRod) {
+    public static String FindNameRod(ArrayList<Rod> rods, VidT findRod) {
         String findIdRod = findRod.getIdVid();
         String newNameRod = "";
         for (Rod rod : rods) {

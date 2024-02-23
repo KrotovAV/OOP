@@ -6,6 +6,6 @@
 public class Programm {
 
     public static void main(String[] args) throws Exception {
-        Controller.run();
+        ControllerT.run();
     }
 }

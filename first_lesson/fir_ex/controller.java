@@ -1,3 +1,6 @@
+import Project.inputScaner;
+import Project.modell;
+
 public class controller {
 
     public static void run() {
@@ -14,15 +17,15 @@ public class controller {
 
         int[] arr = modell.createArr(n);
         arr = modell.fillRandomArr(arr, n, fr, to);
-        view.printEmrty();
-        view.printString("Array: ");
-        view.printArr(arr);
+        View.printEmrty();
+        View.printString("Array: ");
+        View.printArr(arr);
 
         int[] newArr = modell.createArr(n-2);
         newArr = modell.sum3Elenent(arr, n);
-        view.printEmrty();
-        view.printString("New array: ");
-        view.printArr(newArr);
-        view.printEmrty();
+        View.printEmrty();
+        View.printString("New array: ");
+        View.printArr(newArr);
+        View.printEmrty();
     }
 }

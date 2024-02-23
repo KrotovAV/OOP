@@ -1,28 +1,28 @@
 import java.util.ArrayList;
 
 public class Classification {
-    private ArrayList<Carstvo> carstvos = new ArrayList<>();
-    private final static ArrayList<Carstvo> initCarstvos = new ArrayList<>();
+    private ArrayList<CarstvoT> carstvos = new ArrayList<>();
+    private final static ArrayList<CarstvoT> initCarstvos = new ArrayList<>();
 
     static {
-        initCarstvos.add(new Carstvo("0", "0"));
+        initCarstvos.add(new CarstvoT("0", "0"));
     }
 
     public Classification() {
         this(initCarstvos);
     }
 
-    public Classification(ArrayList<Carstvo> Carstvos) {
+    public Classification(ArrayList<CarstvoT> Carstvos) {
         this.carstvos = Carstvos;
     }
 
     public Classification(String idCarstvo, String nameCarstvo) {
         this.carstvos = new ArrayList<>();
-        carstvos.add(new Carstvo(idCarstvo, nameCarstvo));
+        carstvos.add(new CarstvoT(idCarstvo, nameCarstvo));
     }
 
-    public Carstvo getNameCarstvo(String findNameCarstvo) {
-        for (Carstvo carstvo : carstvos) {
+    public CarstvoT getNameCarstvo(String findNameCarstvo) {
+        for (CarstvoT carstvo : carstvos) {
             if (carstvo.getNameCarstvo().equals(findNameCarstvo)) {
                 return carstvo;
             }
@@ -33,7 +33,7 @@ public class Classification {
     @Override
     public String toString() {
         String result = "";
-        for (Carstvo carstvo : carstvos) {
+        for (CarstvoT carstvo : carstvos) {
             result = result + carstvo.toString() + "\n";
         }
         return result;

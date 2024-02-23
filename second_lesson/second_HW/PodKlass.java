@@ -46,27 +46,27 @@ public class PodKlass extends Klass {
         this.namePodKlass = value;
     }
 
-    public static Map<String, PodKlass> convertListPodKlass(List<PodKlass> list) {
-        Map<String, PodKlass> map = list.stream()
-            .collect(Collectors.toMap(PodKlass::getNamePodKlass, Function.identity()));
+    public static Map<String, PodKlassT> convertListPodKlass(List<PodKlassT> list) {
+        Map<String, PodKlassT> map = list.stream()
+            .collect(Collectors.toMap(PodKlassT::getNamePodKlass, Function.identity()));
             return map;
     }
-    public static ArrayList<PodKlass> convertStringToPodKlass(List<String> lines) {
-        ArrayList<PodKlass> prods = new ArrayList<>();
+    public static ArrayList<PodKlassT> convertStringToPodKlass(List<String> lines) {
+        ArrayList<PodKlassT> prods = new ArrayList<>();
         String id, name;
         for (String line : lines) {
             String[] words = line.split(",");
             id = words[0];
             name = words[1];
-            prods.add(new PodKlass(id, name));
+            prods.add(new PodKlassT(id, name));
         }
         return prods;
     }
     
-    public static String FindNamePodKlass(ArrayList<PodKlass> podKlasss, Vid findVid) {
+    public static String FindNamePodKlass(ArrayList<PodKlassT> podKlasss, VidT findVid) {
         String findIdPodKlass = findVid.getIdVid();
         String newNamePodKlass = "";
-        for (PodKlass podKlass : podKlasss) {
+        for (PodKlassT podKlass : podKlasss) {
             if (findIdPodKlass.contains(podKlass.getIdPodKlass()) == true) {
               newNamePodKlass = podKlass.getNamePodKlass();
             }
